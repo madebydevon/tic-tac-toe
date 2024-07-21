@@ -105,21 +105,68 @@ fieldset {
 }
 
 /* --- END OF CSS RESET --- */
+/* 
+body {
+  
+} */
 
 body > * {
   margin: var(--space-m);
+  margin-bottom: var(--space-3xs);
 }
 
 header {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
 
-  font-size: var(--step-0);
+.dialog {
+  margin: 0 auto;
+  position: fixed;
+  top: 45vh;
+  width: calc(max-content + 20vw);
+  height: max-content;
+  z-index: 9999;
+
+  padding: 1rem;
+  border: 1px solid grey;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.buttons button {
+  padding: 0.1rem 0.8rem;
+}
+
+.step-3 {
+  font-size: var(--step-3);
+}
+
+.step-2 {
+  font-size: var(--step-2);
+}
+
+.step--1 {
+  font-size: var(--step--1);
+}
+
+.step--2 {
+  font-size: var(--step--2);
 }
 
 .gameboard-container {
   margin: 2rem;
+  margin-bottom: 0;
   display: flex;
   justify-content: center;
 }
@@ -137,13 +184,28 @@ header {
   place-items: center;
   font-size: 3rem;
   user-select: none;
+  opacity: 1;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0s, background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0s;
+  -webkit-transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0s, background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0s;
+  -moz-transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0s, background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0s;
+  -ms-transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0s, background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0s;
+  -o-transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0s, background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0s;
+}
+
+.grid-3x3 > p:hover {
+  background-color: rgb(237, 232, 232);
+  opacity: 0.45;
 }
 
 .square {
-  border: 1px solid;
+  border: 1px solid rgb(171, 171, 171);
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+}
+
+a {
+  color: #0077ff;
 }
