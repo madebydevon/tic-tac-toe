@@ -8,14 +8,23 @@
   <script src="./scripts/app.js" defer></script>
 </head>
 <body>
+  <dialog data-modal>
+    <div class="end-game-screen">
+      <h2 class="game-status step-2"></h2>
+      <button class="restart-button">Play again?</button>
+      <button class="quit-button">Quit</button>
+    </div>
+  </dialog>
   <header>
-    <h1>Devon's Tic Tac Toe</h1>
+    <h1 class="step-0">Devon's Tic Tac Toe</h1>
     <h2>❌ 🅾️ ❌</h2>
+    <a href="https://github.com/madebydevon">@madebydevon</a>
+    <button class="reset-button">Reset board</button>
   </header>
   <div class="gameboard-container | grid-3x3">
-    <p class="square">X</p>
-    <p class="square">O</p>
-    <p class="square">X</p>`
+    <p class="square"></p>
+    <p class="square"></p>
+    <p class="square"></p>
     <p class="square"></p>
     <p class="square"></p>
     <p class="square"></p>
